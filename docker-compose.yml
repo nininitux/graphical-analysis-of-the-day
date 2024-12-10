@@ -1,0 +1,7 @@
+version: '3'
+services:
+  telegram_bot:
+    build: .
+    volumes:
+      - ./credentials.json:/app/credentials.json
+    restart: always
