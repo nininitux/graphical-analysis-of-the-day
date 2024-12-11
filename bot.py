@@ -12,7 +12,7 @@ logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # Google Sheets API настройки
-SPREADSHEET_ID = "1h-08KCBUbdnVuqVEcR76E4ZxqgevJUu6CaTshLa3uzs"
+SPREADSHEET_ID = "youre-id-sheets"
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 CREDENTIALS_FILE = 'credentials.json'
 credentials = Credentials.from_service_account_file(CREDENTIALS_FILE, scopes=SCOPES)
@@ -274,7 +274,7 @@ async def hourly_task():
 # Основная функция запуска бота
 def main():
     global app
-    app = Application.builder().token("8099090354:AAECu11jG3vPOZvj3loGMNsUvfVR_sKi3rs").build()
+    app = Application.builder().token("youre-token-tekegram").build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("stop", stop))
